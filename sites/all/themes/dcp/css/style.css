@@ -2,3 +2,25 @@
  * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
  * remove this comment and start adding your styles to this file.
  */
+body h1,h2,h3,h4,h5,h6,a,span {
+margin: 0px;
+padding: 0 px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background:;
+  position: relative;
+  font-weight:400px;
+}
+.follow-links.clearfix.site {
+width: 100%;
+background-color: #F0F0E9;
+}
+.social {
+  background: none repeat scroll 0 0 #F0F0E9;
+}
+section#block-block-1 ul li a {
+font-size: 12px;
+color: #696763;
+font-family: 'Roboto', sans-serif;
+}

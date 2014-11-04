@@ -18,7 +18,11 @@ regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
-
+regions[social]         = 'Social'
+regions[follow]         = 'follow'
+regions[followers]      = 'followers'
+regions[menu]         = 'menu'
+regions[search]         = 'search'
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets

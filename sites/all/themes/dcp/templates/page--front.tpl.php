@@ -74,6 +74,24 @@
  */
 ?>
 
+
+
+<div class="main-container container">
+<?php if (!empty($page['follow'])): ?> 
+<aside class="col-sm-6">
+    	<?php print render($page['follow']); ?>
+</aside>
+<?php endif; ?>
+
+<?php if (!empty($page['followers'])): ?>
+<aside class="col-sm-6">
+<?php print render($page['followers']); ?>
+</aside>  
+    <?php endif; ?>
+    
+	
+	</div>
+
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
     <div class="navbar-header">
@@ -84,7 +102,7 @@
       <?php endif; ?>
 
       <?php if (!empty($site_name)): ?>
-      <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+      <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php //print $site_name; ?></a>
       <?php endif; ?>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -99,9 +117,8 @@
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse">
         <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php //print render($primary_nav); ?>
-          <?php endif; ?>
+          <?php  if (!empty($primary_nav)): ?>
+                   <?php endif; ?>
           <?php if (!empty($secondary_nav)): ?>
             <?php print render($secondary_nav); ?>
           <?php endif; ?>
@@ -112,20 +129,23 @@
       </div>
     <?php endif; ?>
   </div>
+  
+  
 </header>
 <div class="main-container container">
-		<?php if (!empty($page['menu'])): ?>
-		<aside class="col-md-9">
-		<?php print render($page['menu']);?>	
-		</aside>
-		<?php endif; ?>
-		<?php if (!empty($page['search'])): ?>
-		<aside class="col-md-3">
-		<?php print render($page['search']);?>	
-		</aside>
-		<?php endif; ?>
+	<?php if (!empty($page['menu'])): ?>
+	 <aside class="col-sm-9">
+	<?php print render($page['menu']); ?>
+	
+	</aside>  <!-- /#menu -->
+    <?php endif; ?>
+    
+    <?php if (!empty($page['search'])): ?>
+	 <aside class="col-sm-3">
+	<?php print render($page['search']); ?>
+	</aside>  <!-- /#search -->
+    <?php endif; ?>
 </div>
-
 <div class="main-container container">
 
   <header role="banner" id="page-header">
@@ -135,10 +155,7 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
-  
- 
- 
- 
+
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
